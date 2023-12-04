@@ -1,4 +1,5 @@
 import { useState } from "react";
+import IngredientSelect from "./IngedientSelect/IngredientSelect";
 import "./RecipeForm.css";
 
 const RecipeForm = (props) => {
@@ -17,7 +18,9 @@ const RecipeForm = (props) => {
         amount: event.target.elements[i + 1].value,
         unit: event.target.elements[i + 2].value,
       };
+      if (ingredient.ingredient !== ""){
       recipe.ingredients.push(ingredient);
+      }
       i += 3;
     }
     props.onSaveRecipe(recipe);
@@ -41,11 +44,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -55,11 +58,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -69,11 +72,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -83,11 +86,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -97,11 +100,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -111,11 +114,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -125,11 +128,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -139,11 +142,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -153,11 +156,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -167,11 +170,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -181,11 +184,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -195,11 +198,11 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
-              <input type="text" />
+              <IngredientSelect />
             </div>
           </div>
           <div className="ingredientGroup">
@@ -209,11 +212,39 @@ const RecipeForm = (props) => {
             </div>
             <div className="ingredientAmount">
               <label>Amount</label>
-              <input type="number" />
+              <input type="text" />
             </div>
             <div className="amountUnit">
               <label>Unit</label>
+              <IngredientSelect />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
               <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="text" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <IngredientSelect />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="text" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <IngredientSelect />
             </div>
           </div>
         </div>

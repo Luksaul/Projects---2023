@@ -13,10 +13,10 @@ const ShoppingList = (props) => {
         var total = 0;
         if (map.has(props.list[i].ingredients[j].ingredient)) {
           total =
-            parseInt(map.get(props.list[i].ingredients[j].ingredient)) +
-            parseInt(props.list[i].ingredients[j].amount);
+            parseFloat(map.get(props.list[i].ingredients[j].ingredient)) +
+            parseFloat(props.list[i].ingredients[j].amount);
         } else {
-          total = parseInt(props.list[i].ingredients[j].amount);
+          total = parseFloat(props.list[i].ingredients[j].amount);
         }
         if (total > 0) {
           map.set(
