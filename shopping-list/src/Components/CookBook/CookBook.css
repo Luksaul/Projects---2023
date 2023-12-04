@@ -1,0 +1,16 @@
+.cookbook {
+  border: black 2px solid;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: pink;
+  width: 100%;
+  height: 600px;
+}
+
+.cookbookentries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 10px;
+}
