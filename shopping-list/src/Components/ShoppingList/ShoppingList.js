@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./ShoppingList.css";
 import ShoppingListItem from "./ShoppingListItem";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const ShoppingList = (props) => {
   const [shoppingList, setShoppingList] = useState("");
@@ -35,6 +34,8 @@ const ShoppingList = (props) => {
       shoppingList += key + " " + value + "\n";
     });
     setShoppingList(shoppingList);
+    console.log(shoppingList);
+    navigator.clipboard.writeText(shoppingList);
   };
 
   return (
@@ -43,14 +44,8 @@ const ShoppingList = (props) => {
       {props.list.map((item) => (
         <ShoppingListItem entry={item} />
       ))}
-
-      <CopyToClipboard
-        text={shoppingList}
-        onCopy={() => alert("Copied!")}
-        onClick={onButtonClickHandler}
-      >
-        <button>Print List</button>
-      </CopyToClipboard>
+        <button
+        onClick={onButtonClickHandler}>Copy List</button>
     </div>
   );
 };

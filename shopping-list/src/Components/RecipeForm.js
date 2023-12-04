@@ -5,6 +5,7 @@ const RecipeForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     var recipe = {
+      id: crypto.randomUUID(),
       title: event.target.elements[0].value,
       ingredients: [],
     };
@@ -33,6 +34,118 @@ const RecipeForm = (props) => {
           <input type="text" />
         </div>
         <div className="ingredients">
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div className="ingredientGroup">
+            <div className="ingredientName">
+              <label>Ingredient</label>
+              <input type="text" />
+            </div>
+            <div className="ingredientAmount">
+              <label>Amount</label>
+              <input type="number" />
+            </div>
+            <div className="amountUnit">
+              <label>Unit</label>
+              <input type="text" />
+            </div>
+          </div>
           <div className="ingredientGroup">
             <div className="ingredientName">
               <label>Ingredient</label>
