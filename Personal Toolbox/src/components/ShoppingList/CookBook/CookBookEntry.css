@@ -1,0 +1,10 @@
+.cookbookentry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: #333 2px solid;
+  height: auto;
+  width: 200px;
+  padding: 10px;
+}

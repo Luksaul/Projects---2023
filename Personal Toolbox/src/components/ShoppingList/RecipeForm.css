@@ -1,0 +1,46 @@
+.recipeform {
+  border: black 2px solid;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: aqua;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.ingredientGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.titleInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredientName {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredientAmount {
+  display: flex;
+  flex-direction: column;
+}
+
+.amountUnit {
+  display: flex;
+  flex-direction: column;
+}

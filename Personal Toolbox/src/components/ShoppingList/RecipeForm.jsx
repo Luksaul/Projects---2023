@@ -1,6 +1,6 @@
 import { useState } from "react";
-import IngredientSelect from "./IngredientSelect/IngredientSelect";
-import "./RecipeForm.css";
+import IngredientSelect from './IngredientSelect/IngredientSelect';
+import './RecipeForm.css';
 
 const RecipeForm = (props) => {
   const submitHandler = (event) => {
@@ -29,11 +29,12 @@ const RecipeForm = (props) => {
   };
 
   return (
+    <>
     <div className="recipeform">
       <h3>Recipes</h3>
       <form onSubmit={submitHandler} id="recipeForm">
         <div className="titleInput">
-          <label>Recipe Title</label>
+          <label>Title</label>
           <input type="text" />
         </div>
         <div className="ingredients">
@@ -248,9 +249,10 @@ const RecipeForm = (props) => {
             </div>
           </div>
         </div>
-        <button type="submit">Add to CookBook</button>
+        <button type="submit">Add to Cookbook</button>
       </form>
     </div>
+    </>
   );
 };
 

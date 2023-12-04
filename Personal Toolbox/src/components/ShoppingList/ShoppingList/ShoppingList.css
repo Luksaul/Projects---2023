@@ -1,0 +1,10 @@
+.shoppinglist {
+  border: black 2px solid;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: palegreen;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
