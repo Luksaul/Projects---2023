@@ -1,9 +1,9 @@
 import "./TodoList.css";
 import { useState } from "react";
+import Todo from "./Todo";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
-  const [checked, setChecked] = useState(false);
 
   const saveTodoHandler = (todo) => {
     setTodos((arr) => [...arr, todo]);
@@ -11,15 +11,15 @@ const TodoList = () => {
 
   const addTodoHandler = (event) => {
     event.preventDefault();
-    var todo = { text: event.target.elements[0].value };
+    var todo = { key: crypto.randomUUID(), text: event.target.elements[0].value};
 
     if (todo.text !== "") saveTodoHandler(todo);
-    console.log(todos);
     document.getElementById("todoInput").reset();
   };
 
-  const checkedHandler = () => {
-    setChecked(checked === true ? false : true);
+  const checkedHandler = (key) => {
+    const clickedItem = todos.filter((clickedTodo) => clickedTodo.key === key)
+    clickedItem.checked = (clickedItem.checked === false) ? true : false;
   };
 
   const clearListHandler = () => {
@@ -28,15 +28,12 @@ const TodoList = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="todo-list">
         <form onSubmit={addTodoHandler} id="todoInput">
           <input type="text" />
-          <button type="submit">+</button>
         </form>
         {todos.map((todo) => (
-          <p onClick={checkedHandler} className={checked ? "checked" : ""}>
-            {todo.text}
-          </p>
+          <Todo todoObj={todo}/>
         ))}
         <button onClick={clearListHandler}>clear</button>
       </div>
