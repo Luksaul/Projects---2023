@@ -1,0 +1,14 @@
+.pomodoro-main {
+  max-width: 400px;
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pomodoro-button {
+  background-color: transparent;
+  border: 0;
+  width: 100px;
+  color: black;
+  cursor: pointer;
+}
